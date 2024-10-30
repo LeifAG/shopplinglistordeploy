@@ -7,19 +7,19 @@
             "config": { 
                 "maxLambdaSize": "15mb", 
                 "runtime": "python3.9",
-                "installCommand": "bash build_files.sh"  // Run your build script here
+                "installCommand": "bash build_files.sh"
             }
         }
     ],
     "routes": [
         {
             "src": "/static/(.*)",
-            "dest": "/staticfiles/$1"  // Maps static files correctly
+            "dest": "/staticfiles/$1"
         },
         {
             "src": "/(.*)",
-            "dest": "shoppinglistor/wsgi.py"  // Directs all other requests to the WSGI file
+            "dest": "shoppinglistor/wsgi.py"
         }
     ],
-    "outputDirectory": "staticfiles"  // Ensure this matches your collectstatic output
+    "outputDirectory": "staticfiles"
 }

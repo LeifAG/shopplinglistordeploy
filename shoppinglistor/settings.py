@@ -83,15 +83,14 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.environ.get('POSTGRES_DATABASE', 'verceldb'),
         'USER': os.environ.get('POSTGRES_USER', 'default'),
-        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', '7wdGHbuAjQ5q'),  # Ideally, keep this secure
-        'HOST': os.environ.get('POSTGRES_HOST', 'ep-wandering-tooth-a4fafbpy-pooler.us-east-1.aws.neon.tech'),
-        'PORT': '5432',  # Typically PostgreSQL default port
+        'PASSWORD': os.environ.get('POSTGRES_PASSWORD', 'q6KLPB8VJwQs'),
+        'HOST': os.environ.get('POSTGRES_HOST', 'ep-fragrant-voice-a4q1qh6x-pooler.us-east-1.aws.neon.tech'),
+        'PORT': '5432',
         'OPTIONS': {
-            'sslmode': 'require',  # Ensures SSL is used
+            'sslmode': 'require',
         },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators

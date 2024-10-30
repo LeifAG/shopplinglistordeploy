@@ -1,14 +1,25 @@
 {
     "version": 2,
-    "buildCommand": "./build_files.sh",
+    "builds": [
+        {
+            "src": "shoppinglistor/wsgi.py",
+            "use": "@vercel/python",
+            "config": { 
+                "maxLambdaSize": "15mb", 
+                "runtime": "python3.9",
+                "installCommand": "bash build_files.sh"  // Run your build script here
+            }
+        }
+    ],
     "routes": [
         {
             "src": "/static/(.*)",
-            "dest": "/static/$1"
+            "dest": "/staticfiles/$1"  // Maps static files correctly
         },
         {
             "src": "/(.*)",
-            "dest": "shoppinglistor/wsgi.py"
+            "dest": "shoppinglistor/wsgi.py"  // Directs all other requests to the WSGI file
         }
-    ]
+    ],
+    "outputDirectory": "staticfiles"  // Ensure this matches your collectstatic output
 }

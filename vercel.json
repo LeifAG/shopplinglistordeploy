@@ -23,6 +23,5 @@
             "src": "/(.*)",
             "dest": "shoppinglistor/wsgi.py"
         }
-    ],
-    "outputDirectory": "staticfiles"
+    ]
 }
